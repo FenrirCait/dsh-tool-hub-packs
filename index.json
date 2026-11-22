@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-22T12:01:05.137Z",
+  "generatedAt": "2026-11-22T12:45:03.517Z",
   "packs": [
     {
       "id": "codex-ui-glass",
@@ -43,6 +43,38 @@
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/style.css",
           "bytes": 12006,
           "sha256": "19cb04b9332becb8b176a7052805bdf79ccb7ad279969753e79e6ea73fcd9d81"
+        }
+      ]
+    },
+    {
+      "id": "thirdparty-lazy",
+      "name": {
+        "zh": "第三方工具自动懒加载（实验）",
+        "en": "Third-party tool auto-lazy (experimental)"
+      },
+      "version": "0.1.0",
+      "description": {
+        "zh": "把第三方插件带来的工具默认隐藏，通过 thirdparty_lazy 会话级启用；跳过已懒加载/核心/MCP 工具。",
+        "en": "Hides third-party plugin tools by default; enable per session via thirdparty_lazy. Skips already-lazy/core/MCP tools."
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/thirdparty-lazy/README.md",
+          "bytes": 845,
+          "sha256": "6d0bab209e3d805ebd3d527e527aace8a26405fa650eabc955e541853e917347"
+        },
+        {
+          "path": "host.mjs",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/thirdparty-lazy/host.mjs",
+          "bytes": 9201,
+          "sha256": "2b9660b788ef888a181c967bf5d369cdfb22e47e5d4a1d501db6e18f2dc356e0"
+        },
+        {
+          "path": "manifest.json",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/thirdparty-lazy/manifest.json",
+          "bytes": 547,
+          "sha256": "f5b1f98cdb7eb4b514a5cf26326e9eb204e869eaa54ecf03fca498964384dd3f"
         }
       ]
     }

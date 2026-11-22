@@ -1,0 +1,16 @@
+{
+  "id": "thirdparty-lazy",
+  "name": {
+    "zh": "第三方工具自动懒加载（实验）",
+    "en": "Third-party tool auto-lazy (experimental)"
+  },
+  "version": "0.1.0",
+  "apiVersion": 2,
+  "description": {
+    "zh": "把第三方插件带来的工具默认隐藏，通过 thirdparty_lazy 会话级启用；跳过已懒加载/核心/MCP 工具。",
+    "en": "Hides third-party plugin tools by default; enable per session via thirdparty_lazy. Skips already-lazy/core/MCP tools."
+  },
+  "host": "host.mjs",
+  "styles": [],
+  "views": []
+}
