@@ -183,3 +183,43 @@
 :root[data-dsh-glass] .th-content {
   background: transparent !important;
 }
+
+/* Layout mode: compat is the official flush layout; float is the mica floating panels. */
+:root[data-dsh-glass-compat] .th-root {
+  padding: 0;
+  gap: 0;
+}
+:root[data-dsh-glass-compat] .th-side {
+  border: 0 !important;
+  border-right: 1px solid var(--thx-rim-soft) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+:root[data-dsh-glass-compat] .th-main {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+:root[data-dsh-glass-compat] .th-top {
+  border-radius: 0;
+}
+
+/* Floor glow: two soft brand spots, gated by codex's --dsh-glass-glow, never an opaque ground. */
+:root[data-dsh-glass] .th-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--dsh-glass-glow, 0);
+  background:
+    radial-gradient(520px 260px at 18% 6%, color-mix(in srgb, var(--dsw-alias-brand-primary, #6ea8ff) calc(14% * var(--dsh-glass-glow-strength, 1)), transparent), transparent 68%),
+    radial-gradient(420px 230px at 86% 14%, color-mix(in srgb, var(--dsw-alias-state-success-tertiary, #5ac8a8) calc(11% * var(--dsh-glass-glow-strength, 1)), transparent), transparent 62%);
+  transition: opacity 180ms ease;
+}
+:root[data-dsh-glass] .th-root > * {
+  position: relative;
+  z-index: 1;
+}

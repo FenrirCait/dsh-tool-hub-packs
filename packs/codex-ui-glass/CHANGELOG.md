@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.0.5
+
+- Follow both layout modes: compat returns to the official flush layout, float uses rounded panels.
+- Follow codex's floor-glow switch with two soft brand spots (no opaque background).
+
+
 ## 1.0.4
 
 - Align the left rail and main column as two equal-height rounded glass panels.
