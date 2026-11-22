@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.0.1
+
+- Let the DSH wallpaper show through instead of painting a panel gradient.
+- Do not paint the sidebar entry chip (the host icon keeps its own color).
+
+
 ## 1.0.0
 
 - Follows codex-ui's `data-dsh-glass` / `data-dsh-glass-float` / `data-dsh-glass-compat` DOM

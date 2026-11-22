@@ -19,38 +19,15 @@
   --thx-shadow: var(--dsh-glass-edge, inset 0 1px 0 rgba(255,255,255,0.2)), var(--dsh-glass-drop, 0 10px 32px rgba(0,0,0,0.18));
 }
 
-/* The panel keeps the host background visible; only its own cards get material. */
+/* Let the DSH wallpaper show through; only cards carry material. */
 :root[data-dsh-glass] .th-root {
   position: relative;
-  isolation: isolate;
-  /* Mirror codex-ui's body ground so the panel's glass cards have something to refract. */
-  background:
-    radial-gradient(520px 260px at 16% 6%, color-mix(in srgb, var(--dsw-alias-brand-primary, #6ea8ff) calc(12% * var(--dsh-glass-glow, 0)), transparent), transparent 70%),
-    radial-gradient(420px 230px at 88% 92%, color-mix(in srgb, var(--dsw-alias-brand-secondary, #ff9ecb) calc(9% * var(--dsh-glass-glow, 0)), transparent), transparent 72%),
-    linear-gradient(165deg,
-      color-mix(in srgb, var(--dsh-glass-ground, #f4f4f5), #d9e4f3 14%) 0%,
-      color-mix(in srgb, var(--dsh-glass-ground, #f4f4f5), #eef2f8 6%) 55%,
-      color-mix(in srgb, var(--dsh-glass-ground, #f4f4f5), #dfe7f2 12%) 100%) !important;
+  background: transparent !important;
 }
-
-:root[data-dsh-glass] body[data-ds-dark-theme] .th-root {
-  background: linear-gradient(165deg, #171a21 0%, #101318 55%, #0b0e13 100%) !important;
+:root[data-dsh-glass] .th-root .th-main,
+:root[data-dsh-glass] .th-root .th-content {
+  background: transparent !important;
 }
-
-:root[data-dsh-glass] .th-root::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: var(--dsh-glass-glow, 0);
-  background:
-    radial-gradient(520px 260px at 16% 6%, color-mix(in srgb, var(--dsw-alias-brand-primary, #6ea8ff) 24%, transparent), transparent 70%),
-    radial-gradient(420px 230px at 88% 92%, color-mix(in srgb, var(--dsw-alias-brand-secondary, #ff9ecb) 18%, transparent), transparent 72%);
-  transition: opacity 180ms ease;
-}
-
-:root[data-dsh-glass] .th-root > * { position: relative; z-index: 1; }
 
 /* Surfaces: cards, group headers, side rail, topbar and dialogs share one material. */
 :root[data-dsh-glass] .th-root .th-card,
@@ -134,11 +111,9 @@
   width: 26px;
   height: 26px;
   border-radius: 8px;
-  background: var(--thx-surface);
-  border: 1px solid var(--thx-rim-soft);
-  backdrop-filter: blur(calc(var(--thx-blur) * 0.8));
-  -webkit-backdrop-filter: blur(calc(var(--thx-blur) * 0.8));
-  box-shadow: inset 0 1px 0 var(--thx-rim-soft);
+  background: transparent;
+  border: 0;
+  color: inherit;
 }
 
 @media (prefers-reduced-transparency: reduce) {
