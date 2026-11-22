@@ -154,3 +154,32 @@
 :root[data-dsh-glass] body[data-ds-dark-theme] .th-root .th-dialog {
   background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #1c1c1e) 88%, transparent) !important;
 }
+
+/* Two aligned rounded panels: the rail and the main column share the same top/bottom line. */
+:root[data-dsh-glass] .th-root {
+  padding: 12px;
+  gap: 12px;
+}
+:root[data-dsh-glass] .th-side {
+  border: 1px solid var(--thx-rim-soft) !important;
+  border-right: 1px solid var(--thx-rim-soft) !important;
+  border-radius: 16px !important;
+  background: var(--thx-surface) !important;
+  overflow: auto;
+}
+:root[data-dsh-glass] .th-main {
+  border: 1px solid var(--thx-rim-soft);
+  border-radius: 16px;
+  background: var(--thx-surface);
+  overflow: hidden;
+  backdrop-filter: blur(var(--thx-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--thx-blur)) saturate(140%);
+}
+:root[data-dsh-glass] .th-top {
+  background: transparent !important;
+  border-bottom: 1px solid var(--thx-rim-soft) !important;
+  border-radius: 16px 16px 0 0;
+}
+:root[data-dsh-glass] .th-content {
+  background: transparent !important;
+}

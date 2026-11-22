@@ -1,5 +1,10 @@
 # codex-ui-glass
 
+## 1.0.4
+
+- Align the left rail and main column as two equal-height rounded glass panels.
+
+
 ## 1.0.3
 
 - Dialogs use a light scrim and a readable glass surface instead of a full-page grey blur.
