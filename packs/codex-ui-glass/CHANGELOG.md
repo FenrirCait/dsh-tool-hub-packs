@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.1.1
+
+- Fix invisible primary buttons in Codex dark: use the accent token for the tint/border and
+  label-primary for text instead of a near-black brand background.
+
+
 ## 1.1.0
 
 - Dialogs and fields now consume codex-ui's own `--dsh-glass-card` / `--dsh-glass-card-raised`
