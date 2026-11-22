@@ -283,3 +283,19 @@
   color: var(--dsw-alias-label-primary, #ffffff) !important;
   border-color: var(--thx-rim-soft, rgba(127,127,127,0.28)) !important;
 }
+
+/* Codex dark maps label-on-color to the same near-black as the brand; brand/status badges
+   become unreadable. Use an explicit accent and white text for the count badge, and keep
+   status badges on their semantic colours with white text. */
+:root[data-dsh-glass] .th-root .th-badge--brand {
+  background: #4176e6 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+:root[data-dsh-glass] .th-root .th-badge--on,
+:root[data-dsh-glass] .th-root .th-badge--danger {
+  color: #ffffff !important;
+}
+:root[data-dsh-glass] .th-root .th-badge--warn {
+  color: #1b1b1f !important;
+}
