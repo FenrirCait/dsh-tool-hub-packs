@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.0.2
+
+- Make the host plugin wrapper transparent when the tool hub is inside it, so the DSH
+  background shows through instead of a white plugin sheet.
+
+
 ## 1.0.1
 
 - Let the DSH wallpaper show through instead of painting a panel gradient.

@@ -129,3 +129,11 @@
     -webkit-backdrop-filter: none !important;
   }
 }
+
+/* The host plugin surface paints its own opaque sheet; make it transparent only when the
+   tool hub is mounted inside it, so the DSH background can reach the glass cards. */
+:root[data-dsh-glass] [data-plugin-panel]:has(.th-root),
+:root[data-dsh-glass] [data-plugin-body]:has(.th-root),
+:root[data-dsh-glass] [data-plugin]:has(.th-root) {
+  background: transparent !important;
+}
