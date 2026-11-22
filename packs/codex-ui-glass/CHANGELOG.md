@@ -1,5 +1,10 @@
 # codex-ui-glass
 
+## 1.0.3
+
+- Dialogs use a light scrim and a readable glass surface instead of a full-page grey blur.
+
+
 ## 1.0.2
 
 - Make the host plugin wrapper transparent when the tool hub is inside it, so the DSH

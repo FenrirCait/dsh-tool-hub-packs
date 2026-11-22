@@ -137,3 +137,20 @@
 :root[data-dsh-glass] [data-plugin]:has(.th-root) {
   background: transparent !important;
 }
+
+/* Dialogs: a light scrim + a readable glass surface, not a full-page grey blur. */
+:root[data-dsh-glass] .th-root .th-backdrop {
+  background: color-mix(in srgb, #000000 18%, transparent) !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+:root[data-dsh-glass] .th-root .th-dialog {
+  background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #ffffff) 86%, transparent) !important;
+  border: 1px solid var(--thx-rim, rgba(255,255,255,0.18)) !important;
+  box-shadow: var(--thx-shadow, 0 18px 44px rgba(0,0,0,0.28));
+  backdrop-filter: blur(var(--thx-blur, 14px)) saturate(135%);
+  -webkit-backdrop-filter: blur(var(--thx-blur, 14px)) saturate(135%);
+}
+:root[data-dsh-glass] body[data-ds-dark-theme] .th-root .th-dialog {
+  background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #1c1c1e) 88%, transparent) !important;
+}
