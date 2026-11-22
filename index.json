@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-22T11:41:41.200Z",
+  "generatedAt": "2026-11-22T11:45:15.118Z",
   "packs": [
     {
       "id": "codex-ui-glass",
@@ -8,7 +8,7 @@
         "zh": "Codex UI 玻璃兼容",
         "en": "Codex UI glass compat"
       },
-      "version": "1.0.6",
+      "version": "1.0.7",
       "description": {
         "zh": "当 codex-ui 开启玻璃质感时，让工具总控台的面板、Dock 按钮和侧边栏入口一起套用同样的云母/平铺玻璃效果。",
         "en": "Applies codex-ui's glass look to the tool hub panel, dock button and sidebar entry whenever its glass effect is on."
@@ -17,8 +17,8 @@
         {
           "path": "CHANGELOG.md",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/CHANGELOG.md",
-          "bytes": 1212,
-          "sha256": "a0ab79e017758d6ccf77da800a9921e871d5f48aab086ae38dc6e6a8a6dc0eed"
+          "bytes": 1264,
+          "sha256": "47884c4026acf62928ac8e9a0f9c017e978874ed9fa0c479ad0ef98d57d632b9"
         },
         {
           "path": "README.md",
@@ -36,13 +36,13 @@
           "path": "manifest.json",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/manifest.json",
           "bytes": 524,
-          "sha256": "028600f1068c9c4ad5dea55200550a155604ce9698dc62b218e70235d62b6f6d"
+          "sha256": "6be6240c9680b1469758e6e4a0b5c98976bb757444deb0cd18e23721058c3375"
         },
         {
           "path": "style.css",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/style.css",
-          "bytes": 9604,
-          "sha256": "b9d9a3023bc6459645e5ffddb085282276deff82c5e9fdbdd886b08c6bb07e15"
+          "bytes": 10122,
+          "sha256": "5e5cb8548cf44f57c5412ea57388245f38593a792a49df35e07410ccb6ec65fc"
         }
       ]
     }

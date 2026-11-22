@@ -1,5 +1,10 @@
 # codex-ui-glass
 
+## 1.0.7
+
+- High-transparency dialogs and fields.
+
+
 ## 1.0.6
 
 - Dialogs are a little more transparent while staying readable.
