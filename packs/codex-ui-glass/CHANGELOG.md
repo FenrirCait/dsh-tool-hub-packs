@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.1.0
+
+- Dialogs and fields now consume codex-ui's own `--dsh-glass-card` / `--dsh-glass-card-raised`
+  tokens, so Clear / Standard / Frosted match its 8/25/45 frost levels exactly.
+
+
 ## 1.0.9
 
 - Dialog, field and scrim opacity now derive from the selected material preset

@@ -247,29 +247,23 @@
   transform: rotate(-7deg);
 }
 
-/* Material presets: derive dialog/field/scrim opacity from codex's --dsh-glass-frost.
-   Clear < 0.5 < Frosted, so the same dialog follows the selected tier instead of a fixed value. */
-:root[data-dsh-glass] {
-  --thx-dialog-alpha: calc(42% + 42% * var(--dsh-glass-frost, 0.5));
-  --thx-field-alpha: calc(22% + 40% * var(--dsh-glass-frost, 0.5));
-  --thx-scrim-alpha: calc(6% + 8% * var(--dsh-glass-frost, 0.5));
-}
+/* Follow codex-ui's own material tokens exactly.
+   clear: frost 8/50 = 0.16, blur 0 | standard: 25/50 = 0.5, blur 14 | frosted: 45/50 = 0.9, blur 20
+   --dsh-glass-card       = 52% * frost   -> 8.3% / 26% / 46.8%
+   --dsh-glass-card-raised= 64% * frost   -> 10.2% / 32% / 57.6% */
 :root[data-dsh-glass] .th-root .th-backdrop {
-  background: color-mix(in srgb, #000000 var(--thx-scrim-alpha), transparent) !important;
-  backdrop-filter: blur(calc(1px + 3px * var(--dsh-glass-frost, 0.5)));
-  -webkit-backdrop-filter: blur(calc(1px + 3px * var(--dsh-glass-frost, 0.5)));
+  background: color-mix(in srgb, #000000 calc(6% + 8% * var(--dsh-glass-frost, 0.5)), transparent) !important;
+  backdrop-filter: blur(var(--thx-blur, 14px));
+  -webkit-backdrop-filter: blur(var(--thx-blur, 14px));
 }
 :root[data-dsh-glass] .th-root .th-dialog {
-  background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #ffffff) var(--thx-dialog-alpha), transparent) !important;
+  background: var(--dsh-glass-card-raised) !important;
   backdrop-filter: blur(var(--thx-blur, 14px)) saturate(150%);
   -webkit-backdrop-filter: blur(var(--thx-blur, 14px)) saturate(150%);
 }
-:root[data-dsh-glass] body[data-ds-dark-theme] .th-root .th-dialog {
-  background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #1c1c1e) var(--thx-dialog-alpha), transparent) !important;
-}
 :root[data-dsh-glass] .th-root .th-dialog .th-input,
 :root[data-dsh-glass] .th-root .th-dialog .th-select {
-  background: color-mix(in srgb, var(--dsw-alias-bg-layer-2, #1e1e2e) var(--thx-field-alpha), transparent) !important;
-  backdrop-filter: blur(calc(var(--thx-blur, 14px) * 0.8));
-  -webkit-backdrop-filter: blur(calc(var(--thx-blur, 14px) * 0.8));
+  background: var(--dsh-glass-card) !important;
+  backdrop-filter: blur(var(--thx-blur, 14px));
+  -webkit-backdrop-filter: blur(var(--thx-blur, 14px));
 }
