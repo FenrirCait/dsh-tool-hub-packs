@@ -22,7 +22,14 @@
 /* Let the DSH wallpaper show through; only cards carry material. */
 :root[data-dsh-glass] .th-root {
   position: relative;
-  background: transparent !important;
+  background-color: var(--dsw-alias-bg-base, #f7f9ff) !important;
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--dsw-alias-label-primary, #ffffff) 7%, transparent) 1px, transparent 0),
+    linear-gradient(135deg, color-mix(in srgb, #2979ff 9%, transparent), transparent 45%, color-mix(in srgb, #7c4dff 7%, transparent) 72%, color-mix(in srgb, #00d4ff 8%, transparent)) !important;
+  background-size: 22px 22px, 100% 100% !important;
+  border: 1px solid var(--thx-rim-soft);
+  border-radius: 18px;
+  overflow: hidden;
 }
 :root[data-dsh-glass] .th-root .th-main,
 :root[data-dsh-glass] .th-root .th-content {
@@ -163,24 +170,37 @@
 :root[data-dsh-glass] .th-side {
   border: 1px solid var(--thx-rim-soft) !important;
   border-right: 1px solid var(--thx-rim-soft) !important;
-  border-radius: 16px !important;
+  border-radius: 18px !important;
   background: var(--thx-surface) !important;
   overflow: auto;
 }
 :root[data-dsh-glass] .th-main {
+  position: relative;
   border: 1px solid var(--thx-rim-soft);
-  border-radius: 16px;
-  background: var(--thx-surface);
+  border-radius: 18px;
+  background: transparent !important;
   overflow: hidden;
   backdrop-filter: blur(var(--thx-blur)) saturate(140%);
   -webkit-backdrop-filter: blur(var(--thx-blur)) saturate(140%);
 }
-:root[data-dsh-glass] .th-top {
-  background: transparent !important;
-  border-bottom: 1px solid var(--thx-rim-soft) !important;
-  border-radius: 16px 16px 0 0;
+:root[data-dsh-glass] .th-root .th-top {
+  position: absolute !important;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 4 !important;
+  background: var(--dsh-glass-card-raised, color-mix(in srgb, var(--dsw-alias-bg-base, #ffffff) 58%, transparent)) !important;
+  background-image: none !important;
+  border: 1px solid var(--thx-rim) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.10), 0 1px 0 var(--thx-rim-soft) !important;
+  backdrop-filter: blur(var(--thx-blur, 14px)) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(var(--thx-blur, 14px)) saturate(150%) !important;
 }
 :root[data-dsh-glass] .th-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 76px !important;
   background: transparent !important;
 }
 
@@ -206,6 +226,27 @@
   border-radius: 0;
 }
 
+/* The host wraps the panel in a global panel sheet; clear its background and pseudo layers. */
+:root[data-dsh-glass] body:has(.th-root) [data-global-panel],
+:root[data-dsh-glass] body:has(.th-root) [data-global-panel]::before,
+:root[data-dsh-glass] body:has(.th-root) [data-global-panel]::after,
+:root[data-dsh-glass] body:has(.th-root) [class*="mainPanel"]::before,
+:root[data-dsh-glass] body:has(.th-root) [class*="mainPanel"]::after {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* The host wraps the panel in a plugin bar/sheet; clear it only while the tool hub is mounted. */
+:root[data-dsh-glass] body:has(.th-root) [data-plugin-bar],
+:root[data-dsh-glass] body:has(.th-root) [data-plugin-bar]::before,
+:root[data-dsh-glass] body:has(.th-root) [data-plugin-panel],
+:root[data-dsh-glass] body:has(.th-root) [data-plugin-panel]::before,
+:root[data-dsh-glass] body:has(.th-root) [data-plugin-body],
+:root[data-dsh-glass] body:has(.th-root) [data-plugin-header] {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
 /* Floor glow: two soft brand spots, gated by codex's --dsh-glass-glow, never an opaque ground. */
 :root[data-dsh-glass] .th-root::before {
   content: "";
@@ -226,25 +267,49 @@
 
 /* DSH brand ground: a faint dot grid plus a large, very low-contrast wordmark. */
 :root[data-dsh-glass] .th-root {
-  background-color: transparent !important;
-  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--dsw-alias-label-primary, #ffffff) 7%, transparent) 1px, transparent 0) !important;
-  background-size: 22px 22px !important;
+  position: relative;
+  background-color: var(--dsw-alias-bg-base, #f7f9ff) !important;
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--dsw-alias-label-primary, #ffffff) 7%, transparent) 1px, transparent 0),
+    linear-gradient(135deg, color-mix(in srgb, #2979ff 9%, transparent), transparent 45%, color-mix(in srgb, #7c4dff 7%, transparent) 72%, color-mix(in srgb, #00d4ff 8%, transparent)) !important;
+  background-size: 22px 22px, 100% 100% !important;
+  border: 1px solid var(--thx-rim-soft);
+  border-radius: 16px;
+  overflow: hidden;
 }
-:root[data-dsh-glass] .th-root::after {
-  content: "DEEPSEEK HARNESS";
+:root[data-dsh-glass] .th-root .th-brand-mark {
+  display: block;
   position: absolute;
-  right: -18px;
-  bottom: 10px;
-  z-index: 0;
+  left: 50%;
+  right: auto;
+  bottom: 64px;
+  z-index: 2;
   pointer-events: none;
-  color: var(--dsw-alias-label-primary, #ffffff);
-  font-size: clamp(38px, 7vw, 96px);
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  white-space: nowrap;
-  opacity: 0.035;
-  transform: rotate(-7deg);
+  width: 100%;
+  aspect-ratio: 472 / 40;
+  height: auto !important;
+  max-height: none;
+  object-fit: contain;
+  opacity: 0.2;
+  filter: drop-shadow(0 0 12px rgba(100, 160, 255, 1)) drop-shadow(0 0 38px rgba(45, 105, 255, 0.8));
+  transform: translateX(-50%) rotate(-7deg);
+  transform-origin: center bottom;
+}
+html[data-ds-dark-theme] .th-root .th-brand-mark,
+body[data-ds-dark-theme] .th-root .th-brand-mark,
+:root[data-ds-theme='dark'] .th-root .th-brand-mark,
+[data-ds-theme='dark'] .th-root .th-brand-mark,
+.th-root[data-th-theme='dark'] .th-brand-mark,
+html[data-theme='dark'] .th-root .th-brand-mark,
+body[data-theme='dark'] .th-root .th-brand-mark {
+  filter: drop-shadow(0 0 14px rgba(140, 190, 255, 0.95)) drop-shadow(0 0 44px rgba(80, 150, 255, 0.8)) !important;
+  opacity: 0.42 !important;
+}
+@media (prefers-color-scheme: dark) {
+  .th-root .th-brand-mark {
+    filter: drop-shadow(0 0 14px rgba(140, 190, 255, 0.95)) drop-shadow(0 0 44px rgba(80, 150, 255, 0.8)) !important;
+    opacity: 0.42 !important;
+  }
 }
 
 /* Follow codex-ui's own material tokens exactly.
@@ -257,7 +322,7 @@
   -webkit-backdrop-filter: blur(var(--thx-blur, 14px));
 }
 :root[data-dsh-glass] .th-root .th-dialog {
-  background: var(--dsh-glass-card-raised) !important;
+  background: color-mix(in srgb, var(--dsh-glass-card-raised) 88%, var(--dsw-alias-bg-base, #ffffff)) !important;
   backdrop-filter: blur(var(--thx-blur, 14px)) saturate(150%);
   -webkit-backdrop-filter: blur(var(--thx-blur, 14px)) saturate(150%);
 }

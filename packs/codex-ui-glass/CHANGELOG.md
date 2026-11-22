@@ -1,5 +1,22 @@
 # codex-ui-glass
 
+## 1.2.0
+
+Stable release for Tool Hub 2.1.0. It styles the plugin's own surfaces and never paints the host
+window.
+
+- Official DSH wordmark behind the panel: gradient-filled SVG, blue/cyan/violet brand glow, and a
+  brighter non-inverted treatment in dark mode.
+- Topbar is an independent floating capsule: 12px gaps, 18px corners, backdrop blur and a shadow;
+  it uses `--dsh-glass-card-raised`, so clear / standard / frosted change its transparency.
+- Content scrolls underneath the capsule (76px top inset), so rows stay visible through the
+  glass instead of being hidden by a white band.
+- The tool-hub root paints its own light glass gradient + dot texture; dialogs, cards, side rail and
+  dock button follow the same three material levels.
+- Leaving the pack disabled is safe: the client's brand node stays hidden and the panel keeps its
+  normal layout.
+
+
 ## 1.1.3
 
 - Fix invisible brand/count badges in Codex dark (brand background and label-on-color both

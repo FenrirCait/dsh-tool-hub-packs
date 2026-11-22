@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-22T12:45:03.517Z",
+  "generatedAt": "2026-11-22T16:52:33.899Z",
   "packs": [
     {
       "id": "codex-ui-glass",
@@ -8,7 +8,7 @@
         "zh": "Codex UI 玻璃兼容",
         "en": "Codex UI glass compat"
       },
-      "version": "1.1.3",
+      "version": "1.2.0",
       "description": {
         "zh": "当 codex-ui 开启玻璃质感时，让工具总控台的面板、Dock 按钮和侧边栏入口一起套用同样的云母/平铺玻璃效果。",
         "en": "Applies codex-ui's glass look to the tool hub panel, dock button and sidebar entry whenever its glass effect is on."
@@ -17,14 +17,20 @@
         {
           "path": "CHANGELOG.md",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/CHANGELOG.md",
-          "bytes": 2145,
-          "sha256": "132765a1bd52bf98339ac1dc51ec975f76a77b94d9b10325e35128404fba3e08"
+          "bytes": 3008,
+          "sha256": "835717b5bfc032c81baa8f652a62c0db8a835f4de79d224cc53091c1b0318f2f"
         },
         {
           "path": "README.md",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/README.md",
-          "bytes": 720,
-          "sha256": "6e308ee2cb9c4c5dc91305eca7be197a2af3b11a115729a9c543d0145f132360"
+          "bytes": 1702,
+          "sha256": "9d170078bacd86a57da5fef26b81b84bdabe976d1d8433c79a7c7fd52745a80c"
+        },
+        {
+          "path": "dsh-wordmark.svg",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/dsh-wordmark.svg",
+          "bytes": 15929,
+          "sha256": "182f040f9d3eccf25b20f5bbfc9d50a21296a88978b91b4dec7e64cbd16b4039"
         },
         {
           "path": "host.mjs",
@@ -36,13 +42,13 @@
           "path": "manifest.json",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/manifest.json",
           "bytes": 524,
-          "sha256": "43c63d9c2bbe78b7097c465678b7a6a839846d95abf96a2145507a131a7d94ab"
+          "sha256": "81bda15ef25029027b99f144be0b0d868caf569a72c1bd4ad99b0b180ad8b364"
         },
         {
           "path": "style.css",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/style.css",
-          "bytes": 12006,
-          "sha256": "19cb04b9332becb8b176a7052805bdf79ccb7ad279969753e79e6ea73fcd9d81"
+          "bytes": 15358,
+          "sha256": "1a7c5174811c366f43044549c205ae080c9d56b8ed2e713a8a94cc6c0d4a28ac"
         }
       ]
     },
