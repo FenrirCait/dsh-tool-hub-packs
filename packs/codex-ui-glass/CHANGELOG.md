@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.0.9
+
+- Dialog, field and scrim opacity now derive from the selected material preset
+  (`--dsh-glass-frost`), so Clear / Standard / Frosted change the panel too.
+
+
 ## 1.0.8
 
 - Lighter dialog scrim so the glass no longer reads as flat grey.
