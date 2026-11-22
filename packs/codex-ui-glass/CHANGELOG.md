@@ -1,5 +1,10 @@
 # codex-ui-glass
 
+## 1.0.8
+
+- Lighter dialog scrim so the glass no longer reads as flat grey.
+
+
 ## 1.0.7
 
 - High-transparency dialogs and fields.
