@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.0.6
+
+- Dialogs are a little more transparent while staying readable.
+- Add a faint DSH dot grid and wordmark as the panel ground.
+
+
 ## 1.0.5
 
 - Follow both layout modes: compat returns to the official flush layout, float uses rounded panels.

@@ -145,7 +145,7 @@
   -webkit-backdrop-filter: blur(2px);
 }
 :root[data-dsh-glass] .th-root .th-dialog {
-  background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #ffffff) 86%, transparent) !important;
+  background: color-mix(in srgb, var(--dsw-alias-bg-elevated, #ffffff) 76%, transparent) !important;
   border: 1px solid var(--thx-rim, rgba(255,255,255,0.18)) !important;
   box-shadow: var(--thx-shadow, 0 18px 44px rgba(0,0,0,0.28));
   backdrop-filter: blur(var(--thx-blur, 14px)) saturate(135%);
@@ -222,4 +222,27 @@
 :root[data-dsh-glass] .th-root > * {
   position: relative;
   z-index: 1;
+}
+
+/* DSH brand ground: a faint dot grid plus a large, very low-contrast wordmark. */
+:root[data-dsh-glass] .th-root {
+  background-color: transparent !important;
+  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--dsw-alias-label-primary, #ffffff) 7%, transparent) 1px, transparent 0) !important;
+  background-size: 22px 22px !important;
+}
+:root[data-dsh-glass] .th-root::after {
+  content: "DEEPSEEK HARNESS";
+  position: absolute;
+  right: -18px;
+  bottom: 10px;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--dsw-alias-label-primary, #ffffff);
+  font-size: clamp(38px, 7vw, 96px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0.035;
+  transform: rotate(-7deg);
 }
