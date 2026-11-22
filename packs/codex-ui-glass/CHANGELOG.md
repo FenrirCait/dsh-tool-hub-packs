@@ -1,5 +1,11 @@
 # codex-ui-glass
 
+## 1.1.2
+
+- Primary buttons use a fixed high-contrast accent in every Codex theme; default buttons keep
+  label-primary text and a visible rim.
+
+
 ## 1.1.1
 
 - Fix invisible primary buttons in Codex dark: use the accent token for the tint/border and

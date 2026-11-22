@@ -268,14 +268,18 @@
   -webkit-backdrop-filter: blur(var(--thx-blur, 14px));
 }
 
-/* Codex dark maps --dsw-alias-brand-primary to a near-black neutral; a solid primary button
-   then becomes black-on-black. Use the always-accent "new color" token for a tinted glass
-   button, and let label-primary choose readable text in both themes. */
+/* Codex dark maps --dsw-alias-brand-primary to a near-black neutral, and some themes map
+   label-on-color to the same dark value. Primary actions therefore get a fixed, accessible
+   accent; ordinary buttons keep readable text and a visible glass rim in every theme. */
 :root[data-dsh-glass] .th-root .th-btn--primary {
-  background: color-mix(in srgb, var(--dsw-alias-brand-primary-new-colorprimary-new-color, #4176e6) 22%, var(--dsh-glass-card-raised, transparent)) !important;
-  border-color: color-mix(in srgb, var(--dsw-alias-brand-primary-new-colorprimary-new-color, #4176e6) 55%, transparent) !important;
-  color: var(--dsw-alias-label-primary, #fff) !important;
+  background: #4176e6 !important;
+  border-color: #4176e6 !important;
+  color: #ffffff !important;
 }
 :root[data-dsh-glass] .th-root .th-btn--primary:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--dsw-alias-brand-primary-new-colorprimary-new-color, #4176e6) 32%, var(--dsh-glass-card-raised, transparent)) !important;
+  background: #2f63cc !important;
+}
+:root[data-dsh-glass] .th-root .th-btn:not(.th-btn--primary):not(.th-btn--danger) {
+  color: var(--dsw-alias-label-primary, #ffffff) !important;
+  border-color: var(--thx-rim-soft, rgba(127,127,127,0.28)) !important;
 }
