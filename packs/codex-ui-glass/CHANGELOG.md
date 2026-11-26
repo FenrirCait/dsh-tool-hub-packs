@@ -2,7 +2,7 @@
 
 ## 1.2.1
 
-- Keep `.th-main` free of `backdrop-filter`, and drop card/group-head blur while a dialog backdrop is open: a filter on either ancestor creates a containing block and makes the fixed group-member transfer dialog scroll with its list. Glass remains on cards, dialogs, the topbar and the side rail outside that dialog state.
+- Keep `.th-main` free of `backdrop-filter`, and drop card/group-head blur while a dialog backdrop is open: a filter on either ancestor creates a containing block and makes the fixed group-member transfer dialog scroll with its list. Glass remains on cards, dialogs, the topbar and the side rail outside that dialog state. A dialog that itself nests another dialog also drops its blur while the inner backdrop is open, so the nested confirm anchors to the viewport too.
 
 ## 1.2.0
 

@@ -190,6 +190,13 @@
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+/* The presets policy dialog nests another dialog inside its scrolling body; the outer dialog's own
+   blur would become the inner backdrop's containing block. Keep the outer dialog's material intact
+   for normal use, but release it while a nested backdrop exists. */
+:root[data-dsh-glass] .th-root .th-dialog:has(.th-backdrop) {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
 :root[data-dsh-glass] .th-root .th-top {
   position: absolute !important;
   top: 12px;

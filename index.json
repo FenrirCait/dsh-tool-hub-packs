@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T20:16:16.242Z",
+  "generatedAt": "2026-11-26T20:18:08.445Z",
   "packs": [
     {
       "id": "codex-ui-glass",
@@ -17,8 +17,8 @@
         {
           "path": "CHANGELOG.md",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/CHANGELOG.md",
-          "bytes": 3342,
-          "sha256": "9265ff7ba33247fce8725c189145fad0af2a2333934b76025d3a1ac4ebe70f6e"
+          "bytes": 3489,
+          "sha256": "dc5d8b9c042d87b3efd9997b49538d34133830f6c509792327d7c3a3964d9799"
         },
         {
           "path": "README.md",
@@ -47,8 +47,8 @@
         {
           "path": "style.css",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/style.css",
-          "bytes": 15786,
-          "sha256": "46ff164fc96dbb3e794bcc2272229e449d0d4b255e8737bb41bfa9452dbdfd16"
+          "bytes": 16199,
+          "sha256": "d04e9d25f6956bca11d58d735a819617695e1e964a8dde2594c6cbc691527f04"
         }
       ]
     },
