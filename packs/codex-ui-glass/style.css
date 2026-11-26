@@ -182,6 +182,14 @@
   overflow: hidden;
   /* No backdrop-filter here: it creates a containing block and makes fixed dialogs scroll with the page. */
 }
+/* A dialog may be mounted inside a card. Card blur would become its containing block, so drop
+   the card material while a backdrop is open; the dialog re-anchors to the viewport and its scrim
+   covers the whole panel. */
+:root[data-dsh-glass] body:has(.th-backdrop) .th-root .th-card,
+:root[data-dsh-glass] body:has(.th-backdrop) .th-root .th-group-head {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
 :root[data-dsh-glass] .th-root .th-top {
   position: absolute !important;
   top: 12px;

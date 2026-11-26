@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T20:10:05.085Z",
+  "generatedAt": "2026-11-26T20:16:16.242Z",
   "packs": [
     {
       "id": "codex-ui-glass",
@@ -17,14 +17,14 @@
         {
           "path": "CHANGELOG.md",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/CHANGELOG.md",
-          "bytes": 3262,
-          "sha256": "e271ba0ce507ad88ea5a854cc08485adff8879514a959fd2c293e3b2a4b23a12"
+          "bytes": 3342,
+          "sha256": "9265ff7ba33247fce8725c189145fad0af2a2333934b76025d3a1ac4ebe70f6e"
         },
         {
           "path": "README.md",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/README.md",
-          "bytes": 1702,
-          "sha256": "9d170078bacd86a57da5fef26b81b84bdabe976d1d8433c79a7c7fd52745a80c"
+          "bytes": 1701,
+          "sha256": "f08ba43dab3a121bb2148ee9665d7541a9f51a90a3902c71265fae980d299395"
         },
         {
           "path": "dsh-wordmark.svg",
@@ -47,8 +47,8 @@
         {
           "path": "style.css",
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/style.css",
-          "bytes": 15345,
-          "sha256": "28cd07110efb71ff6b1e0ad0e05d5f45b09a3624da835b0e8771b1e5e5112b20"
+          "bytes": 15786,
+          "sha256": "46ff164fc96dbb3e794bcc2272229e449d0d4b255e8737bb41bfa9452dbdfd16"
         }
       ]
     },

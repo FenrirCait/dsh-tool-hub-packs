@@ -8,7 +8,7 @@ Copy this folder into an extension root and enable it:
 The manifest declares `styles: ["style.css"]`. The host reads the CSS and the panel injects it
 while the extension is loaded.
 
-## What 1.2.0 does
+## What 1.2.1 does
 
 - Uses the official DSH wordmark as a large, low-contrast background mark. The SVG is gradient-filled
   and carries a brand-blue glow; dark mode keeps the gradient instead of inverting it to grey.

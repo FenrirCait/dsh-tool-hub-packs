@@ -2,7 +2,7 @@
 
 ## 1.2.1
 
-- Keep `.th-main` free of `backdrop-filter`: the filter created a containing block and made fixed dialogs (including the group-member transfer dialog) scroll with the member list. Glass remains on cards, dialogs, the topbar and the side rail.
+- Keep `.th-main` free of `backdrop-filter`, and drop card/group-head blur while a dialog backdrop is open: a filter on either ancestor creates a containing block and makes the fixed group-member transfer dialog scroll with its list. Glass remains on cards, dialogs, the topbar and the side rail outside that dialog state.
 
 ## 1.2.0
 
