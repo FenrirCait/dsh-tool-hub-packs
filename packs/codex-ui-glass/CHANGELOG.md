@@ -1,5 +1,9 @@
 # codex-ui-glass
 
+## 1.2.1
+
+- Keep `.th-main` free of `backdrop-filter`: the filter created a containing block and made fixed dialogs (including the group-member transfer dialog) scroll with the member list. Glass remains on cards, dialogs, the topbar and the side rail.
+
 ## 1.2.0
 
 Stable release for Tool Hub 2.1.0. It styles the plugin's own surfaces and never paints the host

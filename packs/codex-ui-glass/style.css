@@ -180,8 +180,7 @@
   border-radius: 18px;
   background: transparent !important;
   overflow: hidden;
-  backdrop-filter: blur(var(--thx-blur)) saturate(140%);
-  -webkit-backdrop-filter: blur(var(--thx-blur)) saturate(140%);
+  /* No backdrop-filter here: it creates a containing block and makes fixed dialogs scroll with the page. */
 }
 :root[data-dsh-glass] .th-root .th-top {
   position: absolute !important;
