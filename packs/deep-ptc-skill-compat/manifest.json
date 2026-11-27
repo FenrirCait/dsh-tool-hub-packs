@@ -1,0 +1,14 @@
+{
+  "id": "deep-ptc-skill-compat",
+  "name": {
+    "zh": "Deep PTC 技能可见性兼容",
+    "en": "Deep PTC skill visibility compat"
+  },
+  "version": "1.0.0",
+  "apiVersion": 2,
+  "description": {
+    "zh": "把 Deep PTC 的模型可见性状态以只读方式接入 Tool Hub 技能页；不读写 Deep PTC 私有存储。",
+    "en": "Exposes Deep PTC model visibility to the Tool Hub skills page read-only; never touches Deep PTC private storage."
+  },
+  "host": "host.mjs"
+}

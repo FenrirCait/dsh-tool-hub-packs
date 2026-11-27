@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T20:18:08.445Z",
+  "generatedAt": "2026-11-27T07:06:52.588Z",
   "packs": [
     {
       "id": "codex-ui-glass",
@@ -49,6 +49,38 @@
           "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/codex-ui-glass/style.css",
           "bytes": 16199,
           "sha256": "d04e9d25f6956bca11d58d735a819617695e1e964a8dde2594c6cbc691527f04"
+        }
+      ]
+    },
+    {
+      "id": "deep-ptc-skill-compat",
+      "name": {
+        "zh": "Deep PTC 技能可见性兼容",
+        "en": "Deep PTC skill visibility compat"
+      },
+      "version": "1.0.0",
+      "description": {
+        "zh": "把 Deep PTC 的模型可见性状态以只读方式接入 Tool Hub 技能页；不读写 Deep PTC 私有存储。",
+        "en": "Exposes Deep PTC model visibility to the Tool Hub skills page read-only; never touches Deep PTC private storage."
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/deep-ptc-skill-compat/README.md",
+          "bytes": 510,
+          "sha256": "263a6c6778e1032590694ebf9735ffd2ac82cbc61b311c68f0dd72efd3f4189c"
+        },
+        {
+          "path": "host.mjs",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/deep-ptc-skill-compat/host.mjs",
+          "bytes": 3681,
+          "sha256": "a43ad5b4cb8a1c8101f3679f5734b48876ac1ede8e2521e723919e72408791fc"
+        },
+        {
+          "path": "manifest.json",
+          "url": "https://raw.githubusercontent.com/FenrirCait/dsh-tool-hub-packs/main/packs/deep-ptc-skill-compat/manifest.json",
+          "bytes": 482,
+          "sha256": "753e3ae376d020320b0ea7dca9a07c382a950a978f233f6b0fb80e1e9cc3fb3d"
         }
       ]
     },
